@@ -1,7 +1,7 @@
 import React ,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../store/authSlice'
-import {Button, Input, Logo} from "./index"
+import {Button, Input, Logo} from "./index.js"
 import { useDispatch } from 'react-redux'
 import authService from '../appwrite/auth'
 import {useForm} from "react-hook-form"
@@ -31,8 +31,9 @@ function Login() {
     }
 
   return (
-    <div className='flex items-center justify-center w-full'>
-      <div className= {`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+    <div className='py-8 bg-blue-600'>
+        <div className='flex items-center justify-center w-full bg-blue-600'>
+      <div className= {`mx-auto w-full max-w-lg bg-white rounded-xl p-10 border border-black/10`}>
          <div className='mb-2 flex justify-center'>
             <span className='inline-block w-full max-w-[100px]'>
                 <Logo width='100%' />
@@ -78,6 +79,8 @@ function Login() {
         </form>
       </div>
     </div>
+    </div>
+    
   )
 }
 

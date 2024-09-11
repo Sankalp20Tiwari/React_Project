@@ -17,7 +17,7 @@ export class Service {
     async createPost ({title,slug,content,featuredImage,status,userId}){
         try {
             return await this.databases.createDocument(
-                conf.appwriteDatabaseId,
+                conf.appwriteDatabseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
@@ -37,7 +37,7 @@ export class Service {
     async updatePost(slug ,{title,content,featuredImage,status}){
         try {
             return await this.databases.updateDocument(
-                conf.appwriteDatabaseId,
+                conf.appwriteDatabseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
@@ -55,7 +55,7 @@ export class Service {
     async  deletePost(slug){
         try {
             await this.databases.deleteDocument(
-                conf.appwriteDatabaseId,
+                conf.appwriteDatabseId,
                 conf.appwriteCollectionId,
                 slug
             )
@@ -69,7 +69,7 @@ export class Service {
     async getPost(slug){
         try {
             return await this.databases.getDocument(
-                conf.appwriteDatabaseId,
+                conf.appwriteDatabseId,
                 conf.appwriteCollectionId,
                 slug
             )
@@ -82,7 +82,7 @@ export class Service {
     async getPosts(queries = [Query.equal("status","active")]){
           try {
              return await this.databases.listDocuments(
-                conf.appwriteDatabaseId,
+                conf.appwriteDatabseId,
                 conf.appwriteCollectionId,
                 queries,
              )
