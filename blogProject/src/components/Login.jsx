@@ -76,7 +76,7 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type='submit' className='w-full bg-blue-600 text-gray-800 hover:bg-yellow-300'>
+            <Button type='submit' className='w-full bg-blue-600 text-gray-800 '>
               Sign In
             </Button>
           </div>
